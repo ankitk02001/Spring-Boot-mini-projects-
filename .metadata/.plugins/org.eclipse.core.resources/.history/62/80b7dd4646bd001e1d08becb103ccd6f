@@ -1,0 +1,15 @@
+package in.ankit.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.*;
+
+@Entity
+public class Player {
+	
+	@Id
+	private Integer playerId;
+	private String playerName;
+	private Integer playerAge;
+	private String address;
+
+}

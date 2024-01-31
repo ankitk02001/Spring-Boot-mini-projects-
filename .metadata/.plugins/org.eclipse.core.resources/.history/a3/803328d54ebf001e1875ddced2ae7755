@@ -1,0 +1,26 @@
+package in.ankit.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class WelcomeController {
+
+	@GetMapping("/welcome")
+	public String getWelcomeMsg(@RequestParam("name") String name) {
+		String payload=name+" WELCOME TO IT HUB";
+		return payload;
+	}
+	
+	@GetMapping("/Details")
+	public ResponseEntity<String> getCourseTeacher(
+			@RequestParam("course") String course,
+			@RequestParam("teacher") String teacher
+			){
+		String payload=course+" By "+teacher+" fee is 70000$";
+		return new ResponseEntity<>(payload,HttpStatus.OK);
+	}
+}

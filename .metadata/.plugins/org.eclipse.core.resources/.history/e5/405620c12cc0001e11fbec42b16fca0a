@@ -1,0 +1,4 @@
+server.port=9090
+
+Welcome.msg="Welcome To Hello World"
+spring.application.name=sb-rest-api

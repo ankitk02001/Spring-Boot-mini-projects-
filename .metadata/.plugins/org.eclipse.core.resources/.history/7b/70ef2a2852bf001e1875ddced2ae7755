@@ -1,0 +1,14 @@
+package in.ankit.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class WelcomeController {
+
+	@
+	public ResponseEntity<String> getWelMsg(){
+		
+	}
+	
+}

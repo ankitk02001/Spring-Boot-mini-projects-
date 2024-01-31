@@ -1,0 +1,19 @@
+package in.ankit.dao;
+
+public class ReportDaoImpl implements ReportDao {
+
+	
+	
+	public ReportDaoImpl() {
+		super();
+		System.out.println("ReportDaoImpl Constructor");
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String findData() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

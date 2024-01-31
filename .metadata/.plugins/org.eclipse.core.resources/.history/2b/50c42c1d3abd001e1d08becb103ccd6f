@@ -1,0 +1,11 @@
+package in.ankit.security;
+
+public class Security {
+
+	public Security() {
+		super();
+		// TODO Auto-generated constructor stub
+		System.out.println("Security class Constructor");
+	}
+
+}

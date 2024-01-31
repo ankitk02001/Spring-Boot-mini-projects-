@@ -1,0 +1,17 @@
+package in.ankit.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@org.springframework.stereotype.Controller
+public class Controller {
+	
+	@GetMapping
+	public ModelAndView getWelcomeMsg() {
+		ModelAndView mav=new ModelAndView();
+		mav.addObject("msg","WELCOME TO ASHOKIT");
+		mav.setViewName("welcome");
+		return mav;
+	}
+
+}

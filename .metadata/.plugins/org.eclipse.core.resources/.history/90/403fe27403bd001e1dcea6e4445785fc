@@ -1,0 +1,4 @@
+
+public interface Bill {
+  public int pay();
+}

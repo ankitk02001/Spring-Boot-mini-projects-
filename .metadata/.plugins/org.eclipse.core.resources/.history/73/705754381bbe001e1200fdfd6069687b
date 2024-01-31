@@ -1,0 +1,17 @@
+package in.ankit.binding;
+
+import jakarta.validation.constraints.NotEmpty;
+import lombok.Data;
+
+@Data
+public class User {
+
+	@NotEmpty(message="User name is mandatory")
+	private String uname;
+	
+	private String pwd;
+	@NotEmpty(message="Email is required")
+	private String email;
+	private String phno;
+	private String age;
+}

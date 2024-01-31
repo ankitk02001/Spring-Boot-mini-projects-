@@ -1,0 +1,37 @@
+package in.ankit.converter;
+
+import java.io.File;
+
+import com.google.gson.Gson;
+
+import in.ankit.binding.Address;
+import in.ankit.binding.Order;
+
+public class Converter {
+	public static void main(String[] args) {
+		Address address=new Address();
+		address.setCity("Varanasi");
+		address.setState("UttarPardesh");
+		address.setCountry("India");
+		
+		Order order=new Order();
+		order.setOrderId(101);
+		order.setOrderBy("Amit");
+		order.setOrderStatus("Confirmed");
+		order.setBillAmount(556.4);
+		order.setAddress(address);
+		
+		Gson gson=new Gson();
+		String json = gson.toJson(order);
+		System.out.println(json);//out put directly appear on console
+		//{"orderId":101,"orderBy":"Amit","orderStatus":"Confirmed","billAmount":556.4,"address":{"city":"Varanasi","state":"UttarPardesh","country":"India"}}
+		
+		//now converting json to object
+		String od = gson.toJson(new File("Order.json"), Order.class);
+		System.out.println(od);
+		
+
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package in.ankit.conveter;
+
+import in.ankit.binding.Book;
+
+public class JavaToJson {
+
+	public static void main(String[] args) {
+		Book book=new Book();
+		book.setId(101);
+		book.setName("SpringBoot");
+		book.setPrice(355.43);
+	}
+}

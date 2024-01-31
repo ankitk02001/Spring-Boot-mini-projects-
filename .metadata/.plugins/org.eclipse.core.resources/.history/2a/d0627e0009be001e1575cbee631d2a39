@@ -1,0 +1,14 @@
+package in.ankit.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+@Controller
+public class GreetController {
+
+	public String getGreetMsg(Model model) {
+		model.addAttribute("msg", "Good Morning");
+		return "greet";
+		
+	}
+}

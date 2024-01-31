@@ -1,0 +1,20 @@
+package in.ankit.client;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
+
+@Service
+public class ProductClient {
+
+    public void invokeGETProductClient() {
+    	
+    	String apiUrl="http://localhost:9090/products";
+    	WebClient client = WebClient.create();
+    	String block = client.get()
+    	           .uri(apiUrl)
+    	           .retrieve()
+    	           .bodyToMono(String.class)
+    	            .block();
+    	System.out.println(block);
+    }
+}

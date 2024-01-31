@@ -1,0 +1,25 @@
+package in.ankit.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import in.ankit.entity.User;
+
+public interface UserRepository extends CrudRepository<User, Integer>{
+
+	public List<User> findByCountry(String cname);
+	public List<User> findByAge(Integer age);
+	public List<User> findByAgeGreaterThanEqual(Integer age);
+	public List<User> findByCountryIn(List<String> countries);
+	public List<User> findByCountryAndAge(String country, Integer age);
+	public List<User> findByCountryAndAgeAndGender(String country,Integer age,String gender);
+	
+	//Now coustom Query 
+	@Query(value= "From User")
+	public List<User> getAllUserHql();
+	public List<User> getAllUserSql();
+	@Query(value="From User Where Country=:country")
+	public List<User> getAllUserByCountry(String country);
+}

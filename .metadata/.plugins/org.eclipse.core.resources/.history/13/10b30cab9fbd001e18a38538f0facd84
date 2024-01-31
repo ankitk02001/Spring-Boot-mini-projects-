@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package in.ankit.entity;
+
+/**
+ * @author ANKIT
+ *
+ */
+public class Account {
+
+}

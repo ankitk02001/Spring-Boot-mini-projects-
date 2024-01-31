@@ -1,0 +1,5 @@
+package in.ankit.entity;
+
+public class Employee {
+
+}

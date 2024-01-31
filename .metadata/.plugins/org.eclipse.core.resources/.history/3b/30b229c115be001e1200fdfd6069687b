@@ -1,0 +1,16 @@
+package in.ankit.controller;
+
+import org.springframework.ui.Model;
+
+import in.ankit.binding.User;
+
+public class UserController {
+	
+	public String getForm(Model model) {
+		User userobj=new User();
+		
+		model.addAttribute("user", userobj);
+		return "index";
+	}
+
+}

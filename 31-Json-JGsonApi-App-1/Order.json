@@ -1,0 +1,11 @@
+{
+	"orderId": 101,
+	"orderBy": "Amit",
+	"orderStatus": "Confirmed",
+	"billAmount": 556.4,
+	"address": {
+		"city": "Varanasi",
+		"state": "Uttar Pradesh",
+		"country": "India"
+	}
+}

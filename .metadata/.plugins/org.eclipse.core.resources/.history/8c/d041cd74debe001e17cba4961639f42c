@@ -1,0 +1,9 @@
+package in.ankit.converter;
+
+import in.ankit.binding.Person;
+
+public class ConvertJavaToXml {
+
+	Person person=new Person();
+	person.set
+}

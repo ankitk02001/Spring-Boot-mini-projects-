@@ -1,0 +1,26 @@
+package in.ankit.service;
+
+import java.io.FileInputStream;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import in.ankit.entity.User;
+import in.ankit.repository.UserRepository;
+
+@Service
+public class UserService {
+
+	@Autowired
+	public UserRepository UserRepository;
+	
+	public void saveUser() {
+		User user =new User();
+		user.setUserName("Aman");
+		user.setUserEmail("Aman@gmail.com");
+		
+		//file to byte Array
+		String imagePath="E:\\testingc\\a.jpg";
+		FileInputStream fis=new File FileInputStream(null)
+	}
+}

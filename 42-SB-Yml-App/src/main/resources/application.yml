@@ -1,0 +1,8 @@
+ankit:
+  messages:
+    MsgWelcome: "Welcome to hello world"
+    MsgGreet: "Good Morning"
+    MsgWish: "All the Best"
+
+server:
+  port: 9090

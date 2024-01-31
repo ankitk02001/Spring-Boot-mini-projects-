@@ -1,0 +1,28 @@
+package in.ankit.converter;
+
+import java.io.File;
+
+import in.ankit.binding.Person;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
+
+public class ConvertJavaToXml {
+ 
+	public static void main(String[] args) throws JAXBException {
+		Person person=new Person();
+		person.setId(101);
+		person.setName("Aditya");
+		person.setAge(23);
+		person.setPhno(3445566749l);
+		
+		//marshalling
+		JAXBContext instance = JAXBContext.newInstance(Person.class);
+		
+		Marshaller marshaller = instance.createMarshaller();
+		marshaller.marshal(person, new File("Person.xml"));
+		System.out.println("Marshalling Completed");
+	}
+	
+	
+}

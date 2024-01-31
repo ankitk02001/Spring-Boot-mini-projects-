@@ -1,0 +1,35 @@
+package in.ankit;
+
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
+public class PostReqRestTemplate1 {
+
+    public static void main(String[] args) {
+        // Create RestTemplate instance
+        RestTemplate restTemplate = new RestTemplateBuilder().build();
+
+        // Define URL
+        String url = "http://localhost:9090/product";
+
+        // Define the JSON payload
+        String jsonPayload = "{\"productId\":1,\"productName\":\"Machine Cover\",\"productPrice\":231.7}";
+
+        // Set the headers
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        // Create the request entity
+        HttpEntity<String> requestEntity = new HttpEntity<>(jsonPayload, headers);
+
+        // Send POST request and retrieve response
+        ResponseEntity<String> responseEntity = restTemplate.postForEntity(url, requestEntity, String.class);
+
+        // Print response body
+        System.out.println("Response Body by PostRequest : " + responseEntity.getBody());
+    }
+}

@@ -1,0 +1,11 @@
+package in.ankit.dao;
+
+public class MySqlReport implements ReportDao {
+
+	@Override
+	public String findData() {
+		// TODO Auto-generated method stub
+		return "fething data from my sql db";
+	}
+
+}

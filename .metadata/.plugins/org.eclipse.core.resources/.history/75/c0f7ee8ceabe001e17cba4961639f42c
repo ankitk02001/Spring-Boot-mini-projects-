@@ -1,0 +1,20 @@
+package in.ankit.converter;
+
+import com.google.gson.Gson;
+
+import in.ankit.binding.Order;
+
+public class Converter {
+	public static void main(String[] args) {
+		Order order=new Order();
+		order.setOrderId(101);
+		order.setOrderBy("Amit");
+		order.setOrderStatus("Confirmed");
+		order.setBillAmount(556.4);
+		
+		Gson gson=new Gson();
+		String json = gson.toJson(order);
+		System.out.println(json);
+	}
+
+}

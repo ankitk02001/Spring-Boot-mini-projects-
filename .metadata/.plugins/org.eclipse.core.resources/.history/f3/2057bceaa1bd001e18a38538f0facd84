@@ -1,0 +1,37 @@
+package in.ankit.service;
+
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import in.ankit.entity.Account;
+import in.ankit.entity.AccountPk;
+import in.ankit.repository.AccountRepository;
+
+@Service
+public class AccountService {
+	private AccountRepository accountRepository;
+
+	public void setAccountData() {
+		AccountPk apk = new AccountPk();
+		apk.setAccountId(1001);
+		apk.setAccType("Saving");
+		apk.setHolderName("Sachine");
+		
+		Account account=new Account();
+		account.setMinBal(1000.0);
+		account.setBranchName("Annawa");
+		account.setAccpk(apk);
+		accountRepository.save(account);
+	}
+	
+	public void getAccountData() {
+		AccountPk apk1=new AccountPk();
+		apk1.setAccountId(1001);
+		apk1.setAccType("Saving");
+		apk1.setHolderName("Sachine");
+		Optional<Account> findById = accountRepository.findById(apk1);
+		System.out.println(findById.get());
+	}
+
+}

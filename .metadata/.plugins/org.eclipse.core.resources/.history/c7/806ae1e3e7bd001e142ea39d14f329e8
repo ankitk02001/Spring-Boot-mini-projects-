@@ -1,0 +1,14 @@
+package in.ankit.controller;
+
+import org.springframework.web.servlet.ModelAndView;
+
+public class Controller {
+	
+	public ModelAndView getWelcomeMsg() {
+		ModelAndView mav=new ModelAndView();
+		mav.addObject("msg","WELCOME TO ASHOKIT");
+		mav.setViewName("welcome");
+		return mav;
+	}
+
+}

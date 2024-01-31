@@ -1,0 +1,19 @@
+package in.ankit.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class WelcomeController {
+
+	
+	@GetMapping("welcome/{name}")
+	public ResponseEntity<String> getWelMsg(@PathVariable String name){
+		String payload="(\"Your entered name is :\"+name)";
+		return new ResponseEntity<String>(payload , HttpStatus.OK);
+	}
+	
+}

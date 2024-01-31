@@ -1,0 +1,15 @@
+package in.ankit.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class WelcomeController {
+
+	@GetMapping("/welcome")
+	public String getWelcomeMsg(@RequestParam String name) {
+		String payload=name+" WELCOME TO IT HUB";
+		return payload;
+	}
+}

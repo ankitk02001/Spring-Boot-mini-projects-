@@ -1,0 +1,20 @@
+package in.ankit.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.*;
+
+@Entity
+public class User {
+
+	@Id
+	@Column(name="User_Id")
+	private Integer userId;
+	@Column(name="User_Name")
+	private String userName;
+	@Column(name="User_Gender")
+	private String gender;
+	@Column(name="User_Age")
+	private Integer age;
+	@Column(name="User_Country")
+	private String country;
+}
